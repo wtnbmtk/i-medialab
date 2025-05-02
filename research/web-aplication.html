@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="theme-color" content="#009688">
+	<title>WEBアプリケーションの制作に関する研究</title>
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<main id="main" class="iframe">
+		<div id="research" class="main-cont">
+      <div class="cont-title">
+        <h2>リサーチ</h2>
+      </div>
+      <div class="wrap">
+				<div class="clearfix">
+<div id="explanation">
+	<h2>WEBアプリケーションに関する研究</h2>
+	<p>東京工芸大学の厚木キャンパスを訪れた人にキャンパス内の様々な施設（たとえば、図書館、体育館や生協）や学生生活に関連すること、工芸大学の特色、研究室やサークル活動などを動画で紹介します。紹介動画の撮影、編集とともにhtml、css、javascriptなどを利用してWEBアプリケーションとしてのユーザーインタフェースを作っています。右の図が工芸大キャンパスナビのＴＯＰ画面です。また、下のプレーヤーをクリックすると情報メディア研究室と体育館の紹介映像が流れます。いずれも学生が撮影、編集した映像です</p>
+</div>
+
+<div id="figure">
+ 	<img src="images/campus-nav.jpg">
+
+	<div class="video_player">
+	<!--<video id="video1" poster ="firstframe.jpg" width="320" height="240"> -->
+	<video id="video1" poster ="images/poster-1.jpg">
+	<source src="videos/HumanMediaLab.mp4" type="video/mp4">
+	<source src="videos/HumanMediaLab.webm" type="video/webm">
+
+	<p>Video is not visible, most likely your browser does not support HTM5 video</p>
+	</video>
+<div class="interface clearfix">
+	<div id="buttonbar">
+	    <button id="restart1" onclick="restart('video1');">[]</button>
+	    <button id="rew1" onclick="skip('video1', -10)">&lt;&lt;</button>
+	    <button id="play1" onclick="vidplay('video1', 'play1')">&gt;</button>
+	    <button id="fastFwd1" onclick="skip('video1',10)">&gt;&gt;</button>
+	</div>
+
+	<canvas  class="prog_bar" id="canvas1" width="250" height="18">
+	                canvas not supported
+	</canvas>
+	</div>
+	</div> <!-- end of video_player1 -->
+
+	<div class="video_player">
+	<!--<video id="video1" poster ="firstframe.jpg" width="320" height="240"> -->
+	<video id="video2" poster ="images/poster-2.jpg">
+	<source src="videos/gym.mp4" type="video/mp4">
+	<source src="videos/gym.webm" type="video/webm">
+
+	<p>Video is not visible, most likely your browser does not support HTM5 video</p>
+	</video>
+<div class="interface clearfix">
+	<div id="buttonbar">
+	    <button id="restart2" onclick="restart('video2');">[]</button>
+	    <button id="rew2" onclick="skip('video2', -10)">&lt;&lt;</button>
+	    <button id="play2" onclick="vidplay('video2', 'play2')">&gt;</button>
+	    <button id="fastFwd2" onclick="skip('video2',10)">&gt;&gt;</button>
+	</div>
+
+	<canvas  class="prog_bar" id="canvas2" width="250" height="18">
+	                canvas not supported
+	</canvas>
+	</div>
+	</div> <!-- end of video_player2 -->
+
+	<div class="figuretitle">
+	<p>上：キャンパスナビＴＯＰページ<br>
+	中：情報メディア研究室の紹介<br>
+	下：体育館の紹介</p>
+	</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</main>
+
+<script src="video-player.js"></script>
+
+</body>
+
+</html>
